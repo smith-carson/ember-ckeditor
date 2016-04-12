@@ -7,11 +7,17 @@ export default Ember.Component.extend({
 
   _editor: null,
   'on-change': null,
+  
+  config: { 
+    uiColor: '#9AB8F3',
+  },
 
   didInsertElement() {
+    let config = this.get('config');
     let textarea = this.element.querySelector('.editor');
-    let editor = this._editor = CKEDITOR.replace(textarea);
+    let editor = this._editor = CKEDITOR.replace(textarea,config);
     editor.on('change', (e) => {
+      this.set('value',e.editor.getData());
       this.sendAction('on-change', e.editor.getData());
     });
   },
