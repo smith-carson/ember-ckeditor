@@ -7,9 +7,9 @@ export default Ember.Component.extend({
 
   _editor: null,
   'on-change': null,
-  
+
   config: { 
-    uiColor: '#9AB8F3',
+    
   },
 
   didInsertElement() {
