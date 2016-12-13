@@ -13,7 +13,7 @@ module.exports = {
 
   contentFor: function(type, config) {
     if (type === 'vendor-prefix') {
-      return "window.CKEDITOR_BASEPATH = '/assets/ckeditor/';";
+      return `window.CKEDITOR_BASEPATH = '${config.rootURL}assets/ckeditor/';`;
     }
   },
 
