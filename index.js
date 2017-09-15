@@ -12,8 +12,8 @@ module.exports = {
   },
 
   contentFor: function(type, config) {
-    if (type === 'vendor-prefix') {
-      return `window.CKEDITOR_BASEPATH = '${config.rootURL}assets/ckeditor/';`;
+    if (type === 'head') {
+      return `<script>window.CKEDITOR_BASEPATH = '${config.rootURL}assets/ckeditor/';</script>`;
     }
   },
 
