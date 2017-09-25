@@ -1,7 +1,0 @@
-{
-  "name": "ember-ckeditor",
-  "dependencies": {
-    "jquery": "^1.11.1",
-    "ckeditor": "~4.4.7"
-  }
-}
