@@ -1,4 +1,3 @@
-/* eslint-env node */
 'use strict';
 var Funnel = require('broccoli-funnel');
 
@@ -10,7 +9,7 @@ const path = require('path');
 const map = stew.map;
 
 module.exports = {
-  name: 'ember-ckeditor',
+  name: require('./package').name,
 
   included: function(app) {
     this._super.included(app);

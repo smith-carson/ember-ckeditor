@@ -1,24 +1,22 @@
 /* globals CKEDITOR */
-import Ember from 'ember';
+import Component from '@ember/component'
 import layout from '../templates/components/ember-ckeditor';
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout: layout,
 
   _editor: null,
   'on-change': null,
 
-  config: { 
-    
-  },
+  config: null,
 
   didInsertElement() {
-    let config = this.get('config');
+    let config = this.get('config') || {};
     let textarea = this.element.querySelector('.editor');
     let editor = this._editor = CKEDITOR.replace(textarea,config);
     editor.on('change', (e) => {
       this.set('value',e.editor.getData());
-      this.sendAction('on-change', e.editor.getData());
+      this.get('on-change')(e.editor.getData());
     });
   },
 

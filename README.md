@@ -8,27 +8,53 @@
 [![Dev Dependencies](https://img.shields.io/david/dev/smith-carson/ember-ckeditor.svg)](https://david-dm.org/smith-carson/ember-ckeditor#info=devDependencies)
 [![Build Status](https://travis-ci.org/smith-carson/ember-ckeditor.svg?branch=master)](https://travis-ci.org/smith-carson/ember-ckeditor)
 
-This README outlines the details of collaborating on this Ember addon.
+[Short description of the addon.]
 
-## Installation
+Installation
+------------------------------------------------------------------------------
 
-* `git clone <repository-url>` this repository
+```
+ember install ember-ckeditor
+```
+
+Usage
+------------------------------------------------------------------------------
+
+This addon provides the component:
+
+```
+{{ember-ckeditor value=text on-change=(mut text)}}
+```
+
+Contributing
+------------------------------------------------------------------------------
+
+### Installation
+
+* `git clone https://github.com/smith-carson/ember-ckeditor.git`
 * `cd ember-ckeditor`
 * `npm install`
 
-## Running
+### Linting
+
+* `npm run lint:hbs`
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
+
+### Running tests
+
+* `ember test` – Runs the test suite on the current Ember version
+* `ember test --server` – Runs the test suite in "watch mode"
+* `ember try:each` – Runs the test suite against multiple Ember versions
+
+### Running the dummy application
 
 * `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-## Running Tests
-
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
+* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).
