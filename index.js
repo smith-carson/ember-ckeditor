@@ -1,5 +1,5 @@
 'use strict';
-var Funnel = require('broccoli-funnel');
+const Funnel = require('broccoli-funnel');
 
 const UnwatchedDir = require('broccoli-source').UnwatchedDir;
 const mergeTrees = require('broccoli-merge-trees');
