@@ -1,7 +1,6 @@
-/* eslint-env node */
 'use strict';
-var Funnel = require('broccoli-funnel');
 
+const Funnel = require('broccoli-funnel');
 const UnwatchedDir = require('broccoli-source').UnwatchedDir;
 const mergeTrees = require('broccoli-merge-trees');
 const stew = require('broccoli-stew');
@@ -10,7 +9,7 @@ const path = require('path');
 const map = stew.map;
 
 module.exports = {
-  name: 'ember-ckeditor',
+  name: require('./package').name,
 
   included: function(app) {
     this._super.included(app);
@@ -26,11 +25,23 @@ module.exports = {
     }
   },
 
-  treeForPublic: function(tree) {
+  treeForPublic: function(_tree) {
     let trees = [];
     trees.push(
       Funnel(this.ckeditorNode, {
         srcDir: '/',
+        include: [
+          'config.js',
+          'styles.js',
+          'contents.css',
+          'skins/moono-lisa/**/*',
+          'lang/en.js',
+          'plugins/**/lang/en.js',
+          'plugins/**/styles/*.css',
+          'plugins/**/dialogs/*.{css,js}',
+          'plugins/**/skins/**/*.css',
+          'plugins/*/*.js',
+        ],
         destDir: '/assets/ckeditor'
       })
     );
