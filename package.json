@@ -51,7 +51,7 @@
     "test": "tests"
   },
   "dependencies": {
-    "ckeditor": "^4.5.11",
+    "ckeditor": "^4.11.1",
     "ember-cli-babel": "^6.16.0",
     "ember-cli-htmlbars": "^3.0.0"
   },
