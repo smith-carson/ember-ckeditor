@@ -12,6 +12,7 @@ export default Component.extend({
   config: null,
 
   didInsertElement() {
+    lineheight()
     let config = this.get('config') || {};
     let textarea = this.element.querySelector('.editor');
     let editor = this._editor = CKEDITOR.replace(textarea,config);

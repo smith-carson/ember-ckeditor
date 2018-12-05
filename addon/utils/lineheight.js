@@ -1,3 +1,4 @@
+/** globals: CKEDITOR */
 ( function() {
   function addCombo( editor, comboName, styleType, lang, entries, defaultLabel, styleDefinition, order ) {
     var config = editor.config,style = new CKEDITOR.style( styleDefinition );
