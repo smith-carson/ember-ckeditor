@@ -1,6 +1,7 @@
 /* globals CKEDITOR */
 import Component from '@ember/component'
 import layout from '../templates/components/ember-ckeditor';
+import lineheight from 'ember-ckeditor/utils/lineheight';
 
 export default Component.extend({
   layout: layout,
