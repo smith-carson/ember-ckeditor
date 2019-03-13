@@ -8,14 +8,15 @@
 [![Dev Dependencies](https://img.shields.io/david/dev/smith-carson/ember-ckeditor.svg)](https://david-dm.org/smith-carson/ember-ckeditor#info=devDependencies)
 [![Build Status](https://travis-ci.org/smith-carson/ember-ckeditor.svg?branch=master)](https://travis-ci.org/smith-carson/ember-ckeditor)
 
-[Short description of the addon.]
+Exposes CKEditor via friendly Ember Components
 
 Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install ember-ckeditor
+ember install my-addon
 ```
+
 
 Usage
 ------------------------------------------------------------------------------
@@ -31,8 +32,8 @@ Contributing
 
 ### Installation
 
-* `git clone https://github.com/smith-carson/ember-ckeditor.git`
-* `cd ember-ckeditor`
+* `git clone <repository-url>`
+* `cd my-addon`
 * `npm install`
 
 ### Linting
